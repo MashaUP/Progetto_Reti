@@ -1,7 +1,12 @@
 # directories
 server/node_modules
 server/public/uploads
+nginx/cert
 
 
 # files
+server/config/.env
 server/package-lock.json
+docker-compose.yml
+.env
+server/.env
