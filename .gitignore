@@ -1,7 +1,5 @@
 # directories
 server/node_modules
-nginx/cert
-
 
 # files
 server/package-lock.json
