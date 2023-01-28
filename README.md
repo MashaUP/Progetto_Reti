@@ -86,7 +86,7 @@ per testare sara' necessario fornire dati di accesso adeguati a quest'ultimo.
 
 ## Documentazione Api
 
-[Qui.](https://github.com/ema-r/RdCProgAlt/blob/main/docs.txt)
+[Qui.](https://github.com/MashaUP/Progetto_Reti/blob/main/docs.txt)
 
 ## Autori
 
