@@ -58,7 +58,10 @@ SECRET e' utilizzato come secret key per varie funzioni di hashing.
 ```
 git clone https://github.com/ema-r/RdCProgAlt.git
 ```
-
+- Spostarsi nella directory "nginx/cert" e generare i cert con:
+```
+openssl req -x509 -nodes -days 365 -subj "/C=[Nazione]/ST=[Regione]/O=[Organizzazione]/CN=[Sito]" -addext "subjectAltName=DNS:[Sito]" -newkey rsa:2048 -keyout ./nginx-selfsigned.key -out ./nginx-selfsigned.crt;
+```
 - Spostarsi nella directory "server" e "dbserver" ed installare i moduli di node con:
 
 ```
@@ -86,7 +89,7 @@ per testare sara' necessario fornire dati di accesso adeguati a quest'ultimo.
 
 ## Documentazione Api
 
-[Qui.](https://github.com/MashaUP/Progetto_Reti/blob/main/docs.txt)
+[Qui.](https://github.com/ema-r/RdCProgAlt/blob/main/docs.txt)
 
 ## Autori
 
