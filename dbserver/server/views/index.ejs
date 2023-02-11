@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="IT">
+
+<head>
+  <%- include("./partials/header"); %>
+  <%- include("./partials/navbar"); %>
+  
+  <title>SongLify</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="./css/w3.css" rel="stylesheet" type="text/css">
+  <link href="./css/black-theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="myPage">
+  
+  <div class="w3-container w3-padding-64 w3-center" id="team">
+    <h2>Il Team</h2>
+    <p>Studenti Sapienza: </p>
+
+    <div class="w3-row">
+
+      <br>
+
+     <div class="w3-quarter">
+        <img src="./uploads/Spotify.jpg" alt="Founder" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Andrea M</h3>
+        <p>PLACEHOLDER</p>
+      </div>
+
+      <div class="w3-quarter">
+        <img src="./uploads/Spotify.jpg" alt="Founder" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Emanuele R</h3>
+        <p>PLACEHOLDER</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+    <div class="w3-quarter">
+      <h2>Il Nostro Lavoro</h2>
+      <p>SongLify un posto unico per le tue canzoni</p>
+
+      <div id="oauth" style="display: flex;">
+        <form action="/oauth" method="get">
+          <input type="submit" value="Log in" 
+            name="LoginOAuth" id="LoginOAuth" />
+        </form>
+        <form action="/oauth/logout" method="get">
+          <input type="submit" value="Log out" 
+            name="LogoutOAuth" id="LogoutOAuth" />
+        </form>
+      </div>
+      <br>
+       
+      <form action="/youtube/scrub_playlist" method="post">
+          <label for="youtube_playlist_url">Inserisci playlist Youtube </label>
+          <br>
+          <input
+            id="formUrl1"
+            type="text"
+            name="formUrl1"
+            placeholder="inserisci testo"
+            required />
+          <input type="submit" value="OK" />
+      </form>
+      <form action="/spotify/scrub_playlist" method="post">
+          <label for="spotify_playlist_url">Inserisci playlist Spotify </label>
+          <br>
+          <input
+            id="spotify_playlist_url"
+            type="text"
+            name="formUrl2"
+            placeholder="inserisci testo" 
+            required />
+          <input type="submit" value="OK" />
+      </form>
+      
+      <br>
+      <p>Cancella dati: </p>
+      <div id="Cancella" style="display: flex;">
+       
+        <form action="/oauth/delete" method="post">
+          <input type="submit" value="Utente" 
+            name="CancellaUtente" id="CancellaUtente" />
+        </form>
+        <form action="/youtube/delete_access_data" method="post">
+          <input type="submit" value="Youtube" 
+            name="CancellaYoutube" id="CancellaYoutube" />
+        </form>
+        <form action="/spotify/delete_access_data" method="post">
+          <input type="submit" value="Spotify" 
+            name="CancellaSpotify" id="CancellaSpotify" />
+        </form>
+
+      </div>
+    </div>
+    
+  </div>
+  
+  <br>
+
+
+
+  <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+    <div class="w3-row">
+      <div class="w3-col m5">
+        <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contattaci</span></div>
+          <h3>Indirizzi</h3>
+          <p><i class="fa w3-text-teal w3-xlarge"></i>Roma, RM</p>
+          <p><i class="fa w3-text-teal w3-xlarge"></i>+00 00000000</p>
+          <p><i class="fa w3-text-teal w3-xlarge"></i>rdcprogalt@gmail.com</p>
+        </div>
+        <div class="w3-col m7">
+          <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/contatti" target="_blank">
+            <div class="w3-section">      
+              <label>Nome</label>
+              <input class="w3-input" type="text" name="Name" required>
+            </div>
+            <div class="w3-section">      
+              <label>Email</label>
+              <input class="w3-input" type="text" name="Email" required>
+            </div>
+            <div class="w3-section">      
+              <label>Messaggio</label>
+              <input class="w3-input" type="text" name="Message" required>
+            </div>  
+            <input class="w3-check" type="checkbox" checked name="Like">
+            <label>Mi piace!</label>
+            <button type="submit" class="w3-button w3-right w3-theme">Invia</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+
+
+<footer>
+
+<%- include("./partials/footer"); %>
+
+</footer>
+
+</html>
+
