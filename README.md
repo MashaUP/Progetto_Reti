@@ -56,7 +56,7 @@ SECRET e' utilizzato come secret key per varie funzioni di hashing.
 
 - Clonare la repository con:
 ```
-git clone https://github.com/ema-r/RdCProgAlt.git
+git clone https://github.com/MashaUP/RdCProgAlt.git
 ```
 - Spostarsi nella directory "nginx/cert" e generare i cert con:
 ```
