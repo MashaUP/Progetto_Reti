@@ -65,7 +65,7 @@ openssl req -x509 -nodes -days 365 -subj "/C=[Nazione]/ST=[Regione]/O=[Organizza
 - Spostarsi nella directory "server" e "dbserver" ed installare i moduli di node con:
 
 ```
-cd RdCPRogAlt/server
+cd Progetto_Reti/server
 npm install
 ```
 Questo installa LOCALMENTE, sulla propria macchina unix i moduli npm necessari
